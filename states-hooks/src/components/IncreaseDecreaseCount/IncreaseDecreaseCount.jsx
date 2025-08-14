@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import styles from './IncreaseDecreaseCount.module.css'
 const IncreaseDecreaseCount = () => {
     const [count, setCount] = useState(0)
 
@@ -13,11 +14,11 @@ const decreaseButton = ()=>{
     setCount(count - 1)
 }
   return (
-    <div> 
+    <div > 
         <h2>Current count is: {count} </h2>
-        <button onClick={decreaseButton}>Decrease</button>
-        <button onClick={resetButton}>Reset</button>
-        <button onClick={increaseButton}>Increase</button>
+        <button className={styles.buttoncount} onClick={decreaseButton}>Decrease</button>
+        <button  className={styles.buttoncount} onClick={resetButton}>Reset</button>
+        <button className={styles.buttoncount} onClick={increaseButton}>Increase</button>
     </div>
   )
 }
